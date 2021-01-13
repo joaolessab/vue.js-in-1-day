@@ -16,3 +16,6 @@
 - "Prettier - Code formatter";
 - "Bracket Pair Colorizer";
 - "Auto Rename Tag";
+- "JavaScript (ES6) code snippets";
+- "Live Server";
+- "Material Icon Theme";
