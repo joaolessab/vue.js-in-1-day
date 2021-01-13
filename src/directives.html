@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIRECTIVES</title>
+</head>
+<body>
+    <!-- Root Element-->
+    <div id="app">
+        <img
+            v-bind:src=srcImg
+            v-bind:alt=titleImg
+        />
+        <hr/>
+        <a v-bind:href="url">Vue</a>
+        <hr/>
+        <p v-text="textExample1"></p>
+        <p v-text="'Example of Text 2'"></p>
+
+        <div v-html="htmlExample"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                srcImg: 'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo.png',
+                titleImg: 'Logo Vue',
+                url: 'https://vuejs.org',
+                textExample1: 'Example of Text 1',
+                htmlExample: '<b>HTML Example</b>'
+            }
+        })
+    </script>    
+</body>
+</html>
