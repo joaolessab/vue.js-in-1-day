@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIRECTIVES (V-MODEL / V-IF)</title>
+</head>
+<body>
+    <!-- Root Element-->
+    <div id="app">
+        <!-- We do not use bind for this situation below -->
+        <input type="text" v-model="typedText"> 
+        {{typedText}}
+        
+        <br/>
+        <div v-if="typedText == 1">
+            <img
+                v-bind:src=srcImg1
+                v-bind:alt=titleImg
+            />
+        </div>
+
+        <div v-if="typedText == 2">
+            <img
+                v-bind:src=srcImg2
+                v-bind:alt=titleImg
+            />
+        </div>
+
+        <div v-if="typedText == 3">
+            <img
+                v-bind:src=srcImg3
+                v-bind:alt=titleImg
+            />
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                typedText: '',
+                srcImg1: 'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo.png',
+                srcImg2: 'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo2.png',
+                srcImg3: 'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo3.png',
+                titleImg: 'Logo Vue'
+            }
+        })
+    </script>    
+</body>
+</html>
