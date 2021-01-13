@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Here's what is going to happen the magic-->
+    <div id="app">
+        {{ msg }}
+    </div>
+
+    <!-- First I have to load Vue Library, after it, I can write Vue.js commands -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Here's what is going to happen the magic -->
     <script>
         new Vue({
-
+            el: '#app',
+            data: {
+                msg: 'Teste de Mensagem'
+            }
         })
-    </script>
-    <script src="https://unpkg.com/vue@next"></script>
+    </script>    
 </body>
 </html>
