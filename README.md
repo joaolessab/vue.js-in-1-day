@@ -19,6 +19,9 @@
 ### I CREATED A README DOCUMENT ONLY FOR VUE.JS
 - [Go check it here](https://github.com/jvlessa/VUE-JS-in-1-day/blob/main/readmes/TECH-NOTES.md)
 
+### CODE TIPS:
+- We DO NOT put functions inside our data elements;
+
 ### VISUAL STUDIO CODE AND EXTENSIONS
 - I use Visual Studio Code and some extensions on my text editor;
 - <u>Search for these extensions and install them</u>:

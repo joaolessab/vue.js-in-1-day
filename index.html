@@ -13,7 +13,7 @@
         <p>{{ fruits[1] + ' and ' + fruits[2] }}</p>
         <p>Student: {{ student.name }}</p>
         <p>Sum: {{ 1 + num1 }}</p>
-        <p>{{ fun() }}</p>
+        <p>{{ function1(2) }}</p>
     </div>
 
     <!-- First I have to load Vue Library, after it, I can write Vue.js commands -->
@@ -22,15 +22,20 @@
     <!-- Here's what is going to happen the magic -->
     <script>
         new Vue({
+            // Element of the component
             el: '#app',
+            // Data of the components
             data: {
                 msg: 'Message Test',
                 boolTest: false,
                 fruits: ['Apple', 'Mango', 'Strawberry'],
                 student: { name: 'Joao' },
-                num1: 1,
-                fun: function(){
-                    return 'Message Test 2'
+                num1: 1                
+            },
+            // Methods of the whole component
+            methods: {
+                function1 (index){
+                    return 'Fruits: ' + this.fruits[index]
                 }
             }
         })
