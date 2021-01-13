@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Root Element-->
     <div id="app">
-        {{ msg }}
+        <p>{{ msg }}</p>
+        <p>{{ boolTest ? 'True' : 'False'}}</p>
+        <p>{{ fruits[1] + ' and ' + fruits[2] }}</p>
+        <p>Student: {{ student.name }}</p>
+        <p>Sum: {{ 1 + num1 }}</p>
+        <p>{{ fun() }}</p>
     </div>
 
     <!-- First I have to load Vue Library, after it, I can write Vue.js commands -->
@@ -18,7 +24,14 @@
         new Vue({
             el: '#app',
             data: {
-                msg: 'Teste de Mensagem'
+                msg: 'Message Test',
+                boolTest: false,
+                fruits: ['Apple', 'Mango', 'Strawberry'],
+                student: { name: 'Joao' },
+                num1: 1,
+                fun: function(){
+                    return 'Message Test 2'
+                }
             }
         })
     </script>    
