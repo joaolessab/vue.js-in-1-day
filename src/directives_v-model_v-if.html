@@ -17,20 +17,23 @@
             <img
                 v-bind:src=srcImg1
                 v-bind:alt=titleImg
+                width="200px"
             />
         </div>
 
-        <div v-if="typedText == 2">
+        <div v-else-if="typedText == 2">
             <img
                 v-bind:src=srcImg2
                 v-bind:alt=titleImg
+                width="200px"
             />
         </div>
 
-        <div v-if="typedText == 3">
+        <div v-else="typedText == 3">
             <img
                 v-bind:src=srcImg3
                 v-bind:alt=titleImg
+                width="200px"
             />
         </div>
     </div>
