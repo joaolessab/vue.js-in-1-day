@@ -1,7 +1,7 @@
 <h1 align="center"><b>VUE JS IN 1 DAY</b></h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jvlessa/VUE JS in 1 day/main/media/repo_logo.png" width="350">
+  <img src="https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo.png" width="350">
 </p>
 
 - Repository focused on: Creation of a quickly VUE.JS Project;
