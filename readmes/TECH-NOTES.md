@@ -1,0 +1,3 @@
+# TECH NOTES (VUE.JS)
+## DECLARING ELEMENTS
+- el: element;

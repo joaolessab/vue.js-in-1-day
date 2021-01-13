@@ -13,6 +13,9 @@
 - [Click here](https://v3.vuejs.org/guide/installation.html#cdn)
  
 ## TIPS
+### I CREATED A README DOCUMENT ONLY FOR VUE.JS
+- [Go check it here]()
+
 ### VISUAL STUDIO CODE AND EXTENSIONS
 - I use Visual Studio Code and some extensions on my text editor;
 - <u>Search for these extensions and install them</u>:
