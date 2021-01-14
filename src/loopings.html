@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPINGS</title>
+</head>
+<body>
+    <!-- Root Element-->
+    <div id="app">        
+        <br/>
+        <div v-for="image in images">
+            <img
+                :src=image
+                width="200px"
+            />
+        </div>
+        <p v-for="fruit in fruits">{{fruit}}</p>
+
+        <!-- For w/ Index -->
+        <p v-for="(fruit, index) in fruits">{{index}} - {{fruit.name}}</p>
+
+        <ul>
+            <li v-for="(value, key, index) in fruits">
+                {{index}} - {{key}}: {{value}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                images: [
+                    'https://raw.githubusercontent.com/jvlessa/VUE-JS--v2--in-1-day/main/media/repo_logo1.png',
+                    'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo2.png',
+                    'https://raw.githubusercontent.com/jvlessa/VUE-JS-in-1-day/main/media/repo_logo3.png'
+                ],
+                fruits: [
+                    { name: 'Apple', color: 'Red'},
+                    { name: 'Mango', color: 'Green'},
+                    { name: 'Banana', color: 'Yellow'}
+                ]
+            }
+        })
+    </script>    
+</body>
+</html>
