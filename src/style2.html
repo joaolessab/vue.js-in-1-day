@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLE 2</title>
+</head>
+<body>
+    <div id="app">
+
+        <input type="text" v-on:keyup.enter="alterarNome('Jones')" v-model="typedText">
+
+        <ul>
+            <li v-for="item in array" @click="alert($event)" style="background: white;">
+                {{item}}
+            </li>
+        </ul>
+
+        red
+        <input @click="colorizeP($event.target.value)" type="radio" name="color" value="red" checked>
+        green
+        <input @click="colorizeP($event.target.value)" type="radio" name="color" value="green">
+        blue
+        <input @click="colorizeP($event.target.value)" type="radio" name="color" value="blue">
+        yellow
+        <input @click="colorizeP($event.target.value)" type="radio" name="color" value="yellow">
+
+        <p v-bind:class="classParagraph">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio aperiam placeat eaque dolore illo, vitae in cum, impedit dignissimos totam magnam atque perferendis! Ex dolores aut facere nesciunt aliquam! Fugit?
+        </p>
+
+    </div>
+
+    <style>
+        .red{background-color: red;}
+        .green{background-color: green;}
+        .blue{background-color: blue;}
+        .yellow{background-color: yellow;}
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                classParagraph: 'red',
+                typedText: '',
+                array: []
+            },
+            methods:{
+                alterarNome(lastName, event){
+                    this.array.push(this.typedText);
+                    this.typedText = '';
+                },
+                alert(event){
+                    //alert(event.target.textContent.trim());
+                    element = event.target;
+                    if (element.style.background == "white"){
+                        event.target.style = "background: red";
+                    }
+                    else
+                        event.target.style = "background:white";
+                },
+                colorizeP(color){
+                    this.classParagraph = color;
+                }
+            }
+        })
+    </script>    
+</body>
+</html>
