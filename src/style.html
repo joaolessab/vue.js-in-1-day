@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLE</title>
+</head>
+<body>
+    <div id="app">
+
+        <input type="text" v-on:keyup.enter="alterarNome('Jones')" v-model="typedText">
+
+        <ul>
+            <li v-for="item in array" @click="alert($event)" style="background: white;">
+                {{item}}
+            </li>
+        </ul>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                typedText: '',
+                array: []
+            },
+            methods:{
+                alterarNome(lastName, event){
+                    this.array.push(this.typedText);
+                    this.typedText = '';
+                },
+                alert(event){
+                    //alert(event.target.textContent.trim());
+                    element = event.target;
+                    if (element.style.background == "white"){
+                        event.target.style = "background: red";
+                    }
+                    else
+                        event.target.style = "background:white";
+                }
+            }
+        })
+    </script>    
+</body>
+</html>
