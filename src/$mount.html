@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$MOUNT</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <button onclick="load()">Change
+    </button>
+    <!-- Root Element-->
+    <div id="app">
+    </div>
+
+    <!-- Here's what is going to happen the magic -->
+    <script>
+        function load(){
+            app.$mount("#app");
+        }
+        const app = new Vue({
+            data: {
+                name: 'Hi world'
+            },
+            template: "<h1>{{name}}</h1>"
+        });
+    </script>    
+</body>
+</html>
