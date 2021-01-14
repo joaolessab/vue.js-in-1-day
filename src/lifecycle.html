@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFECYCLES</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+    </div>
+    
+    <script>
+        Vue.component('panel', {
+            // Now it has to be a function returning an object
+            data() {
+                return {
+                    titulo: 'Painel Notícias'
+                }
+            },
+            methods:{
+                alertSomething(){
+                    this.titulo = "alert something"
+                }
+            },
+            template: `
+                <div>
+                    <h1>{{titulo}}</h1>
+                    <button @click="alertSomething">Alert</button>
+                </div>
+            `
+        });
+
+        const app = new Vue({
+            methods: {
+
+            },
+            template: "<panel></panel>",
+            beforeCreate(){
+                console.log("Before create");
+            },
+            created(){
+                console.log("Vue Created");
+            },
+            beforeMount(){
+                console.log("Montar log")
+            },
+            mounted(){
+                console.log("mounted");
+            },
+            beforeUpdate(){
+                console.log("Before Updated"); 
+            },
+            updated(){
+                console.log("Updated"); 
+            },
+            beforeDestroy(){
+                console.log("beforeDestroy"); 
+            },
+            destroyed(){
+                console.log("destroyed"); 
+            },
+        }).$mount("#app");
+    </script>    
+</body>
+</html>

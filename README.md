@@ -22,6 +22,11 @@
 ### CODE TIPS:
 - We DO NOT put functions inside our data elements;
 
+### VUE JS LIFECYCLE METHODS
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jvlessa/VUE-JS--v2--in-1-day/main/media/lifecycle.png" width="550">
+</p>
+
 ### VISUAL STUDIO CODE AND EXTENSIONS
 - I use Visual Studio Code and some extensions on my text editor;
 - <u>Search for these extensions and install them</u>:
