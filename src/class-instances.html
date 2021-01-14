@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS INSTANCE</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <button onclick="print()">Change
+    </button>
+    <!-- Root Element-->
+    <div id="app1">
+        {{name}}
+    </div>
+
+    <div id="app2">
+        {{name}}
+    </div>
+    <!-- Here's what is going to happen the magic -->
+    <script>
+        let message = "My app";
+        function print(){
+            //message = "App Modified";
+            app1.name = "App Modified";
+        }
+
+        const app1 = new Vue({
+            el: '#app1',
+            data: {
+                name: `${message} 1`
+            }
+        });
+
+        const app2 = new Vue({
+            el: '#app2',
+            data: {
+                name: `${message} 2`
+            }
+        });
+    </script>    
+</body>
+</html>
