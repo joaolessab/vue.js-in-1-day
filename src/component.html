@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPONENTS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <panel></panel>
+        <panel></panel>
+    </div>
+
+    <div id="app1">
+        <panel></panel>
+        <panel></panel>
+    </div>
+    
+    <script>
+        Vue.component('panel', {
+            // Now it has to be a function returning an object
+            data() {
+                return {
+                    titulo: 'Painel Notícias'
+                }
+            },
+            methods:{
+                alertSomething(){
+                    this.titulo = "alert something"
+                }
+            },
+            template: `
+                <div>
+                    <h1>{{titulo}}</h1>
+                    <button @click="alertSomething">Alert</button>
+                </div>
+            `
+        });
+
+        const app = new Vue({
+            el: "#app"
+        });
+
+        const app1 = new Vue({
+            el: "#app1"
+        });
+    </script>    
+</body>
+</html>
