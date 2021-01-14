@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVENT PREVENT</title>
+    <title>KEY UP</title>
 </head>
 <body>
     <!-- Root Element-->
     <div id="app">
         <!-- EventPreventDefault -->
-        <form v-on:submit.prevent="alterarNome('Jones')">
-            <input type="text" v-model="typedText">
-            <button type="submit">Add</button>
-        </form>
-            
+        <input v-on:keyup.enter="alterarNome('Jones')" v-model="typedText">
+        <input v-on:keyup.space="alterarNome('Ryan')" v-model="typedText">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
